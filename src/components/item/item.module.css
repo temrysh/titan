@@ -1,0 +1,49 @@
+.item {
+  width: 300px;
+}
+
+/* border immitation */
+.item::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 420px;
+  background: #fff;
+  border-radius: 10px;
+  pointer-events: none;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item[data-focus="true"]::before {
+  transform: scale3d(1.23, 1.23, 1);
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item[data-focus="true"] .image {
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+.title {
+  margin-top: 3.6rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: visible;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item[data-focus="true"] .title {
+  opacity: 1;
+}

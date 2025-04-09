@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.list {
+  display: flex;
+  width: fit-content;
+  gap: 40px;
+  padding: 100px;
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
