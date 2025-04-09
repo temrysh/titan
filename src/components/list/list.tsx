@@ -14,7 +14,7 @@ import styles from "./list.module.css";
 const NAV_KEYS = ["ArrowRight", "ArrowLeft"];
 const ITEM_WIDTH = 340; // width + gap
 
-interface Item {
+interface ListItem {
   id: number;
   title: string;
   images: {
@@ -23,7 +23,7 @@ interface Item {
 }
 
 interface ListProps {
-  items: Item[];
+  items: ListItem[];
 }
 
 const List = memo(({ items }: ListProps) => {
